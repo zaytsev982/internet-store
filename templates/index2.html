@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <form method="post" novalidate>
+        {% csrf_token %}
+        <div class="box1">
+            {% for field in form %}
+            <div class="box2">
+                {{ field.label_tag }}
+                {{ field }}
+                {{ field.errors }}
+            </div>
+            {% endfor %}
+        </div>
+        <input value="Отправить" type="submit">
+    </form>
+    <h1>Start</h1>
+    <p>{{ personal_data.name }} {{ personal_data.second_name }} {{ personal_data.age }}</p>
+    <p>{{ position }}</p>
+    <ul>
+        {% for i in languages %}
+            <li>{{ i }}</li>
+        {% endfor %}
+    </ul>
+    <img src="{% static 'img/a1.jpg' %}">
+</body>
+</html>

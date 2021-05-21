@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} title {% endblock title %}</title>
+</head>
+<body>
+    <h1>{% block header %} Каталог {% endblock header %}</h1>
+    <div>{% block content %}{% endblock content %}</div>
+    <div>{% if i > 2 %}{% endif %}</div>
+    <div>footer</div>
+
+</body>
+</html>
