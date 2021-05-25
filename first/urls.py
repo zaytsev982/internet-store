@@ -25,5 +25,5 @@ urlpatterns = [
     path("testdb/", views.create),
 
     path("index/", views.index),
-    path("index/add-new-employee/", )
+    path("index/add-new-employee/", views.add_employee)
 ]
