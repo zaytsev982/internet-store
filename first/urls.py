@@ -20,10 +20,6 @@ from django.urls import re_path
 from django.views.generic import TemplateView
 urlpatterns = [
     path("about/", TemplateView.as_view(template_name="about.html")),
-    path("index2/", views.index2),
-    path('users/<int:id>/<name>/', views.users),
-    path("testdb/", views.create),
-
     path("index/", views.index),
     path("index/add-new-employee/", views.add_employee)
 ]
