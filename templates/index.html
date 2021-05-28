@@ -10,9 +10,16 @@
     <div class="wrapper">
         <div class="main-info">
             <a href="/index/add-new-employee/">Добавить</a>
-            <a href="">Изменить</a>
-            <a></a>
-            <a></a>
+            {% for i in employee %}
+                <div class="employee-wrapper">
+                    <p>{{ i.name }}</p>
+                    <p>{{ i.second_name }}</p>
+                    <p>{{ i.age }}</p>
+                    <p>{{ i.gender }}</p>
+                    <a href="">Изменить</a>
+                    <a href="">Удалить</a>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </body>
